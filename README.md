@@ -1,2 +1,2 @@
 # CPP_learning
-Record of CPP learning
+Record of CPP practice
