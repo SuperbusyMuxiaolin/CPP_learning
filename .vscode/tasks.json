@@ -10,9 +10,9 @@
                 "-I",
                 "${workspaceFolder}/head",
                 "${file}",
-                "${workspaceFolder}/source/*.cpp",
+                //"${workspaceFolder}/source/*.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${workspaceFolder}/build/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
