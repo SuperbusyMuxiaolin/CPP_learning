@@ -1,9 +1,13 @@
 #pragma once
 #include <iostream>
+#include <fstream>
+#include <cctype>
 #include "Worker.hpp"
 #include "Boss.hpp"
 #include "Manager.hpp"
 #include "Employee.hpp"
+
+#define FILENAME "workers.txt"
 
 using namespace std;
 
@@ -31,10 +35,27 @@ public:
     // 删除离职员工
     void delete_worker();
 
+    // 保存职工信息到txt文件
+    void save();
+
+    // 修改职工
+    void modify();
+
+    // 按编号或者姓名查找指定员工
+    void look();
+
+    // 按员工编号进行排序
+    void sort();
+
+    // 清空文件
+    void clean();
+
     // 析构函数
     ~WorkerManage();
 
-    int worker_num = 0;
+    int worker_num;
 
-    Worker **worker_p_array = NULL;
+    bool file_empty;
+
+    Worker **worker_p_array;
 };

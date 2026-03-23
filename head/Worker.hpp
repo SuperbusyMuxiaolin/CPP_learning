@@ -6,7 +6,7 @@ using namespace std;
 class Worker
 {
 public:
-    // 战士Worker信息
+    // 展示Worker信息
     virtual void show_info();
 
     virtual ~Worker() {};

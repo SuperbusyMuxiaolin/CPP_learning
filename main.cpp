@@ -28,12 +28,16 @@ int main()
             wm.delete_worker();
             break;
         case 4:
+            wm.modify();
             break;
         case 5:
+            wm.look();
             break;
         case 6:
+            wm.sort();
             break;
         case 7:
+            wm.clean();
             break;
         default:
             break;
