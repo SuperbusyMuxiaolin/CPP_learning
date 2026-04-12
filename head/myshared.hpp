@@ -1,13 +1,12 @@
 #pragma once
 #include <iostream>
 using namespace std;
+#include <atomic>
 
 // template <typename T>
 class ControlBlock
 {
 public:
-    int strong_ref = 0;
-
     ControlBlock()
     {
         cout << "控制块构造" << endl;
@@ -33,6 +32,9 @@ public:
     {
         return strong_ref;
     }
+
+private:
+    std::atomic<int> strong_ref = 0;
 };
 
 template <typename T>
