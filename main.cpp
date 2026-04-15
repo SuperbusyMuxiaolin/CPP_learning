@@ -1,28 +1,22 @@
 #include <iostream>
-#include "./head/myshared.hpp"
-
-class Person
-{
-public:
-    Person()
-    {
-        cout << "Person构造" << endl;
-    }
-    void demo()
-    {
-        cout << "demo调用" << endl;
-    }
-    ~Person()
-    {
-        cout << "Person析构" << endl;
-    }
-};
+#include "myvector.hpp"
 void test01()
 {
-    MySharedptr<Person> ptr1(new Person);
-    cout << ptr1.ref->get_strongref() << endl;
-    MySharedptr<Person> ptr2;
-    ptr1 = ptr2;
+    myvector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.push_back(5);
+    v.push_back(6);
+    v.showall();
+    v.push_first(10);
+    v.showall();
+    v.push_index(1, 20);
+    v.showall();
+    v.pop_index(2);
+    v.showall();
+    cout << v[20] << endl;
 }
 int main()
 {
