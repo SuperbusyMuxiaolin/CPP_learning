@@ -9,9 +9,9 @@ public:
     // 构造
     myvector()
     {
-        int cap = 5;
-        int size = 0;
-        T *data = new T[cap];
+        this->cap = 5;
+        this->size = 0;
+        this->data = new T[cap];
     }
 
     // 越界
