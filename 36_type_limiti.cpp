@@ -81,6 +81,8 @@ struct remove_reference<T &&>
 template <typename T>
 using remove_reference_t = typename remove_reference<T>::type;
 
+// std::remove_reference_t<T> 是 T 去掉引用后的类型
+
 void test01()
 {
     tt t1;
