@@ -21,7 +21,7 @@ void do_work2(Data &&data)
     data.value = 200;
 }
 
-void do_work(constData &data)
+void do_work(Data &data)
 {
     data.value = 200;
 }
