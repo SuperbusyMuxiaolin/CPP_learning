@@ -31,7 +31,7 @@ void test01()
 {
     Data data;
 #if 1
-    // 拷贝构造函数（复制到内部元组tuple） -> 移动构造函数(内部转化为右值直接绑定到右值引用参数上)
+    // 拷贝构造函数（复制到内部元组tuple） -> 移动构造函数
     auto do_work = do_work1;
 #else
     // 拷贝构造函数 （复制到内部元组tuple）
@@ -47,7 +47,7 @@ void test02()
 {
     Data data;
 #if 1
-    // 移动构造函数 -> 移动构造函数(内部转化为右值直接绑定到右值引用参数上)
+    // 移动构造函数 -> 移动构造函数
     auto do_work = do_work1;
 #else
     // 移动构造函数
